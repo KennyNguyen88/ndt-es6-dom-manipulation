@@ -2,6 +2,10 @@ extends template/site
 block title
     title Home | Static Web Starter Kit
 block main
-    table#myTable(border="1")
-        form
-            input(type="button" value="Create the table")
+    form
+        select#colorSelect
+            option Red
+            option Green
+            option White
+            option Black
+        input(type="button" value="Select and Remove")

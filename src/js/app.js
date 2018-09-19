@@ -6,12 +6,15 @@ req.keys().forEach(function(key){
     req(key);
 });
 
-//01
-function js_style(){
-    const pText = document.querySelector("#text");
-    pText.style.fontSize = "20px";
-    pText.style.color = "yellow";
-}
+//02
+const submitHandler = (e) => {
+    e.preventDefault();
+    const fname = document.querySelector("input[name='fname']");
+    const lname = document.querySelector("input[name='lname']");
+    console.log('fname value: ', fname.value);
+    console.log('lname value: ', lname.value);
+};
 
-const jsstyle = document.querySelector("#jsstyle");
-jsstyle.addEventListener("click", js_style);
+
+const form1 = document.querySelector("form");
+form1.addEventListener("submit", submitHandler);

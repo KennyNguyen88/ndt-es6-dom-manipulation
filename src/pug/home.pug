@@ -2,6 +2,11 @@ extends template/site
 block title
     title Home | Static Web Starter Kit
 block main
-    p#text JavaScript Exercises - w3resource
-    div
-        button#jsstyle Style
+    form#form1
+        | First name:
+        input(type="text" name="fname" value="David")
+        br
+        | Last name:
+        input(type="text" name="lname" value="Beckham")
+        br
+        input(type="submit" value="Submit")

@@ -6,15 +6,17 @@ req.keys().forEach(function(key){
     req(key);
 });
 
-//02
-const submitHandler = (e) => {
+//04
+const clickHandler = (e) => {
     e.preventDefault();
-    const fname = document.querySelector("input[name='fname']");
-    const lname = document.querySelector("input[name='lname']");
-    console.log('fname value: ', fname.value);
-    console.log('lname value: ', lname.value);
+    const alink = document.querySelector("a");
+    console.log('href: ', alink.href);
+    console.log('hreflang: ', alink.hreflang);
+    console.log('rel: ', alink.rel);
+    console.log('target: ', alink.target);
+    console.log('type: ', alink.type);
 };
 
 
-const form1 = document.querySelector("form");
-form1.addEventListener("submit", submitHandler);
+const btn = document.querySelector("button");
+btn.addEventListener("click", clickHandler);

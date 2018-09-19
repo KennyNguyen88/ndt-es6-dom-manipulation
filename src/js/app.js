@@ -6,17 +6,21 @@ req.keys().forEach(function(key){
     req(key);
 });
 
-//06
-const modify = (rowIndex,columnIndex,cellString) => {
+//07
+const modify = (rowNumber,columnNumber) => {
     const table = document.querySelector("table");
-    const row = table.rows[rowIndex];
-    const cell = row.cells[columnIndex];
-    cell.innerHTML = cellString;
+    for(let i = 0 ; i < rowNumber; i++){
+        const newRow = table.insertRow(i);
+        for(let ii = 0; ii < columnNumber; ii++){
+            const newCell = newRow.insertCell(ii);
+            newCell.innerHTML = `Row-${i} Column-${ii}`;
+        }
+    }
 };
 
 const clickHandler = (e) => {
     e.preventDefault();
-    modify(1,0,"New 10");
+    modify(4,3);
 };
 
 const btn = document.querySelector("input[type='button']");

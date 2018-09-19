@@ -6,17 +6,18 @@ req.keys().forEach(function(key){
     req(key);
 });
 
-//05
-const clickHandler = (e) => {
-    e.preventDefault();
+//06
+const modify = (rowIndex,columnIndex,cellString) => {
     const table = document.querySelector("table");
-    const newRow = table.insertRow();
-    const newCell1 = newRow.insertCell(0);
-    const newCell2 = newRow.insertCell(1);
-    newCell1.innerHTML = '1';
-    newCell2.innerHTML = '2';
+    const row = table.rows[rowIndex];
+    const cell = row.cells[columnIndex];
+    cell.innerHTML = cellString;
 };
 
+const clickHandler = (e) => {
+    e.preventDefault();
+    modify(1,0,"New 10");
+};
 
 const btn = document.querySelector("input[type='button']");
 btn.addEventListener("click", clickHandler);

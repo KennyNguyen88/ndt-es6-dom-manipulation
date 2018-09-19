@@ -2,12 +2,15 @@ extends template/site
 block title
     title Home | Static Web Starter Kit
 block main
-    table#sampleTable(border="1")
+    table#myTable(border="1")
         tr
             td Row1 cell1
             td Row1 cell2
         tr
             td Row2 cell1
             td Row2 cell2
-    br
-    input(type="button" value="Insert row")
+        tr
+            td Row3 cell1
+            td Row3 cell2
+    form
+        input(type="button" value="Change content")

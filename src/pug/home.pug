@@ -2,6 +2,12 @@ extends template/site
 block title
     title Home | Static Web Starter Kit
 block main
-    p
-        a#w3r(type="text/html" hreflang="en-us" rel="nofollow" target="_self" href="https://www.w3resource.com/") w3resource
-    button Click here to get  attributes value
+    table#sampleTable(border="1")
+        tr
+            td Row1 cell1
+            td Row1 cell2
+        tr
+            td Row2 cell1
+            td Row2 cell2
+    br
+    input(type="button" value="Insert row")

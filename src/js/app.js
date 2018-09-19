@@ -6,17 +6,17 @@ req.keys().forEach(function(key){
     req(key);
 });
 
-//04
+//05
 const clickHandler = (e) => {
     e.preventDefault();
-    const alink = document.querySelector("a");
-    console.log('href: ', alink.href);
-    console.log('hreflang: ', alink.hreflang);
-    console.log('rel: ', alink.rel);
-    console.log('target: ', alink.target);
-    console.log('type: ', alink.type);
+    const table = document.querySelector("table");
+    const newRow = table.insertRow();
+    const newCell1 = newRow.insertCell(0);
+    const newCell2 = newRow.insertCell(1);
+    newCell1.innerHTML = '1';
+    newCell2.innerHTML = '2';
 };
 
 
-const btn = document.querySelector("button");
+const btn = document.querySelector("input[type='button']");
 btn.addEventListener("click", clickHandler);

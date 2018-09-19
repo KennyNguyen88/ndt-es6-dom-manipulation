@@ -6,15 +6,19 @@ req.keys().forEach(function(key){
     req(key);
 });
 
-//08
-const removeColor = () => {
+//09
+const count = () => {
     const list = document.querySelector("select ");
-    list.remove(list.selectedIndex);
+    const totalOptions = list.length;
+    console.log('Count: ' + totalOptions);
+    Array.from(list.options).forEach((option) => {
+        console.log("Index: ",option.index," - Value: ", option.value);
+    })
 };
 
 const clickHandler = (e) => {
     e.preventDefault();
-    removeColor();
+    count();
 };
 
 const btn = document.querySelector("input[type='button']");
